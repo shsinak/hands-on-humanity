@@ -1,0 +1,70 @@
+<!-- resources.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+    
+        <img src="logo.png" alt="Hands of Humanity Logo" class="logo-icon">
+        <div class="logo-text">Hands of Humanity</div>
+    
+		</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Local Resources</a></li>
+                <li class="dropdown">
+                    <a href="#">EYES ON..</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="palestine.html">Palestine</a></li>
+                        <li><a href="yemen.html">Yemen</a></li>
+                        <li><a href="lebanon.html">Lebanon</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="mentalhealth.html">Mental Health</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+	<div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
+	
+    <main>
+        <h2>Find Local Help</h2>
+        <p>Browse a list of local shelters, food banks, and volunteer opportunities.</p>
+
+        <!-- Dropdown for selecting zip code -->
+        <label for="zipcode">Select Zip Code:</label>
+        <select id="zipcode">
+            <option value="48104">48104</option>
+            <option value="48105">48105</option>
+            <option value="48126">48126</option>
+        </select>
+        
+        <!-- Button to filter the resources based on selected zip code -->
+        <button onclick="filterResources()">Show Resources</button>
+
+        <!-- Container for displaying the filtered resources -->
+        <div id="resource-cards"></div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Hands of Humanity. </p>
+    </footer>
+
+	<button id="back-to-top" class="back-to-top-btn">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>

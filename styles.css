@@ -1,0 +1,1280 @@
+/* General Styles */
+body {
+     font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.main-container {
+    max-width: 1200px; /* Adjust the max width as needed */
+    margin: 0 auto; /* Centers the container */
+    
+}
+
+header {
+    background-color: #0B132B;  /* New header background color */
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header.shrink {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+header.sticky {
+    background-color: #002c47;  /* Darker shade for sticky state */
+}
+
+
+
+
+/* Style for the logo container */
+/* Container for logo (icon + text) */
+/* Container for logo (icon + text) */
+.logo {
+    display: flex;
+    align-items: center; /* Vertically center the text with the icon */
+    justify-content: center;
+    margin-left: 10px;
+    width: auto;  /* Auto width based on content */
+    height: 90px; /* Define the height for the logo container */
+    overflow: hidden; /* Prevents overflow if the image is too large */
+}
+
+/* Style for the logo image (icon) */
+.logo-icon {
+    width: 50px;  /* Adjust the size of the logo icon */
+    height: auto; /* Keep the aspect ratio */
+    object-fit: contain; /* Ensures the entire image is contained within the bounds */
+    margin-right: 15px; /* Space between the icon and text */
+}
+
+/* Style for the text to the right of the logo */
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; 
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    text-align: left; /* Align the text to the left of its container */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 10px 20px;
+    
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow for depth */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #0B132B; /* Matches the color you've chosen */
+    list-style: none;
+    padding: 0;
+    top: 100%; /* Ensures it appears below the "EYES ON" tab */
+    left: 0; /* Aligns it with the left edge of the parent */
+	transform: translateX(-15%);
+    min-width: 150px; /* Adjust the width if needed */
+    z-index: 1000;
+    margin-top: 0; /* Ensures there's no extra space */
+    border-radius: 4px; /* Optional, gives rounded corners */
+}
+
+/* Ensure proper spacing between the links */
+.dropdown-menu li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: white;
+    display: block;
+    text-decoration: none; /* Optional, removes underline */
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Optional: Style on hover for dropdown items */
+.dropdown-menu li a:hover {
+    background-color: #00466a; /* Darker shade on hover */
+}
+
+/* Adjust the overall navbar to prevent overlap */
+nav ul li {
+    position: relative; /* Ensure dropdown aligns with the li item */
+}
+
+
+/* mental health tip */
+
+.daily-quote-section {
+    text-align: center; /* Centers text inside the section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Optional: Adds spacing */
+}
+
+#generate-tip {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #657c99; /* ckground */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#generate-tip:hover {
+    background-color: #2d425c; 
+}
+
+
+
+.mission-statement {
+    background-color: #f4f4f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.mission-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.mission-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.mission-item h3 {
+    font-size: 1.6rem;
+    color: #3A506B;
+    margin-top: 10px;
+}
+
+.mission-item p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.mission-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    
+}
+
+@media (max-width: 768px) {
+    .mission-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+#progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #f3f3f3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    transition: width 0.1s;
+}
+
+
+
+/* Latest Headlines Section */
+
+/* Latest Headlines Section */
+.headlines {
+    padding: 30px 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 1200px;
+	 font-family: 'Open Sans', sans-serif;
+}
+
+.headlines h2 {
+    font-size: 2.5rem;
+    color: #3A506B;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+	 font-family: 'Open Sans', sans-serif;
+}
+
+.headline-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards in a row by default */
+    gap: 20px;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+	 font-family: 'Open Sans', sans-serif;
+}
+
+.headline-card {
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    padding: 15px;
+    border: 2px solid #f1f1f1; /* Soft border for cards */
+    max-width: 350px; /* Restrict width of each card */
+    margin: 0 auto; /* Center cards if space allows */
+    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Keep content aligned to the top */
+	min-height: 550px; /* Adjust this to be the height of the longest card */
+	 font-family: 'Open Sans', sans-serif;
+}
+
+.headline-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.headline-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.headline-card .image-credit {
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    background-color: #f4f4f9;
+    border-top: 1px solid #ddd;
+    font-style: italic;
+	 font-family: 'Open Sans', sans-serif;
+}
+
+.headline-content {
+    padding: 10px 15px; /* Reduced padding to save space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to top */
+	flex-grow: 1;
+	 font-family: 'Open Sans', sans-serif;
+}
+
+.headline-content h3 {
+    font-size: 1.2rem; /* Slightly smaller font size */
+    color: #0B132B;
+    margin: 0 0 5px 0; /* Reduced margin */
+    font-weight: 500;
+    line-height: 1.3;
+	 font-family: 'Open Sans', sans-serif;
+}
+
+.headline-content p {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #555;
+    margin: 0; /* Removed margin */
+    line-height: 1.4;
+	 font-family: 'Open Sans', sans-serif;
+}
+
+.read-more-btn {
+    font-size: 1rem;
+    color: white;
+    background-color: #657c99;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+	position: absolute; /* Position the button absolute */
+    bottom: 20px; /* Place the button 20px from the bottom */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+}
+
+.read-more-btn:hover {
+    background-color: #2d425c;
+}
+
+.headline-card:hover .headline-content h3 {
+    color: #0077b6;
+}
+
+.headline-card:hover .headline-content p {
+    color: #333;
+}
+
+@media (max-width: 1200px) {
+    .headline-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards in a row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .headline-cards-container {
+        grid-template-columns: 1fr; /* 1 card per row on small screens */
+    }
+}
+
+
+
+
+/*Palestine.html*/
+
+/* Hero Section: Large background image with text overlay */
+/* Hero Section: Large background image with text overlay */
+.hero-section {
+    position: relative;
+    max-width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    display: flex; /* Optional: for controlling child elements inside */
+    align-items: center; /* Vertically centers content inside */
+    justify-content: center; /* Horizontally centers content inside */
+    border-radius: 0;
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%; /* This ensures the image takes up the full height of the section */
+    object-fit: cover; /* Ensures the image covers the section without being stretched or distorted */
+    object-position: center; /* Centers the image */
+    position: absolute; /* Makes sure the image stays within the section */
+    top: 0; /* Positions the image at the top of the section */
+    left: 0; /* Ensures the image starts from the left edge */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Text color on top of the image */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+}
+
+.hero-content h1 {
+    font-size: 4rem; /* Adjust size as necessary */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow to text for better visibility */
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Adjust size as necessary */
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow to text for better visibility */
+}
+
+.credit-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8); /* Subtle white text with transparency */
+    background-color: rgba(0, 0, 0, 0.4); /* Slight dark background to make text more legible */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.credit-text a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.credit-text a:hover {
+    text-decoration: underline;
+}
+
+/* Container for all card-based sections */
+.card-section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Flexbox container for cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the cards */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+/* Individual card styles */
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex: 1 1 calc(33.333% - 40px); /* Ensures three cards per row */
+    min-width: 280px;
+    max-width: 350px;
+    text-align: center;
+}
+
+/* Styling for buttons inside cards */
+.card a.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #38497d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.card a.btn:hover {
+    background: #0B132B;
+}
+
+/* Style for article buttons */
+.article-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #38497d; 
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.article-button:hover {
+    background-color: #0B132B; 
+}
+
+/* Articles Section */
+.articles-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.article-card {
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 20px;
+}
+
+.article-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.article-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+/* Video Section */
+.video-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.video-card {
+    flex: 1 1 45%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Important Terms */
+/* Important Terms */
+.terms-section {
+    padding: 60px 20px; /* Increased padding for more space */
+    text-align: center;
+}
+
+.terms-container {
+    display: flex;
+    justify-content: center;
+    gap: 190px;
+    flex-wrap: wrap;
+}
+
+.terms-section h2 {
+    font-size: 40px; /* Make the title bigger */
+    margin-bottom: 50px; /* Adjust spacing between title and cards */
+    margin-top: 0px; /* Reduce space above the title */
+}
+
+/* Flip Card */
+.term-card {
+    width: 250px; /* Increased width */
+    height: 180px; /* Increased height */
+    perspective: 1200px; /* Adjusted for better 3D effect */
+}
+
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.term-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+    padding: 15px;
+    font-size: 18px; /* Increased font size */
+    font-weight: bold;
+}
+
+.card-front {
+    background: #ffffff;
+}
+
+.card-back {
+    background: #f4f4f4;
+    transform: rotateY(180deg);
+	padding: 20px;
+	font-size: 16px; /* Adjusted font size for better readability */
+	
+}
+
+
+/* More Articles */
+.articles-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.article-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+.what-else-can-i-do {
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button {
+    background-color: #0066cc;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.accordion-button:hover {
+    background-color: #005bb5;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    border-radius: 0 0 8px 8px;
+}
+
+.plus-sign {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.accordion-item.active .plus-sign {
+    transform: rotate(45deg);
+}
+
+
+/* beirut map */
+
+/* Container to hold the map and overlay */
+.map-container {
+    display: flex;
+    justify-content: center;  /* Horizontally center the iframe */
+    align-items: center;      /* Vertically center the iframe */
+    width: 100%;
+    height: 800px;            /* Adjust height as needed */
+    margin: 0 auto;           /* Ensure the container is centered in the parent section */
+}
+
+/* Google Map iframe styles */
+.beirut-map {
+    width: 80%;               /* Adjust width to suit your design */
+    max-width: 1200px;        /* Set a max-width if you want to limit the size */
+    height: 100%;
+    border: none;
+}
+
+/* Overlay that censors the map */
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+/* Style for resource cards */
+.resource-card {
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card h3 {
+    font-size: 1.5rem;
+    color: #0B132B;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style for the buttons in each card */
+.resource-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.resource-buttons .btn {
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.resource-buttons .btn:hover {
+    background-color: #1C2541;
+}
+
+/* Style specific to the donate and volunteer buttons */
+.resource-buttons .donate {
+    background-color: #1C2541;
+}
+
+.resource-buttons .donate:hover {
+    background-color: #0B132B;
+}
+
+.resource-buttons .volunteer {
+    background-color: #32a852;
+}
+
+.resource-buttons .volunteer:hover {
+    background-color: #258c3a;
+}
+
+/* Mental Health Page Styling */
+
+.grounding-section {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f9;
+}
+
+.exercise-card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.breathing-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #5cb85c;
+    margin: 20px auto;
+    animation: breathe 8s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+}
+
+.sensory-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sensory-card {
+    background: #d1e7dd;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.sensory-card:hover {
+    transform: scale(1.05);
+    background: #b0d4c0;
+}
+
+
+.muscle-relaxation {
+    text-align: center;
+}
+
+#relaxation-box {
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures the fill effect stays inside */
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The color fill effect */
+#fill-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%; /* Starts empty */
+    background-color: #90caf9; /* Soothing blue */
+    transition: height 4s linear; /* Smooth fill over 4 seconds */
+    opacity: 0.7;
+}
+
+/* Step text remains visible */
+#relaxation-step {
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+}
+
+/* Buttons properly spaced */
+.relaxation-buttons {
+    margin-top: 15px;
+}
+
+#start-relaxation, #stop-relaxation {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#start-relaxation {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#stop-relaxation {
+    background-color: #f44336;
+    color: white;
+}
+
+
+/* Header */
+header {
+    background-color: #0B132B;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #0B132B;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs and Text */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+.mental-health-fact {
+    background-color: #dde0eb;
+    border-left: 4px solid #1C2541;
+    padding: 12px 16px;
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.fact-link-container {
+    margin-top: 8px;
+}
+
+.fact-link {
+    display: inline-block;
+    color: #1C2541;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.fact-link:hover {
+    color: #0B132B;
+    text-decoration: underline;
+}
+
+/* Resource Buttons */
+.resource-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.resource-buttons .btn {
+    background-color: #38497d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.resource-buttons .btn:hover {
+    background-color: #0B132B;
+}
+
+
+/* Style the dropdown */
+#zipcode {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #2c3e50; /* Dark blue-gray border */
+    border-radius: 5px;
+    background-color: #f8f9fa; /* Light gray */
+    color: #2c3e50;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+#zipcode:hover {
+    border-color: #2980b9; /* Blue on hover */
+}
+
+/* Style the button */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #38497d; /* Blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 10px; /* Space between dropdown and button */
+}
+
+button:hover {
+    background-color: #0B132B; /* Darker blue on hover */
+}
+
+/* Optional: Add some spacing */
+label {
+    font-weight: bold;
+    margin-right: 10px;
+	font-size: 20px;
+}
+
+
+/* Accordion Styling */
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: #38497d;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;  /* To position the arrow icon */
+}
+
+.accordion-header:after {
+    content: "▶"; /* Unicode character for right arrow */
+    font-size: 1.3em;
+    color: white;
+    position: absolute;
+    right: 10px;  /* Adjust the right margin to space the arrow */
+    top: 50%;
+    transform: translateY(-50%);  /* Vertically center the arrow */
+    transition: transform 0.3s ease;
+}
+
+/* When accordion item is active, rotate the arrow */
+.accordion-item.active .accordion-header:after {
+    transform: translateY(-50%) rotate(90deg); /* Rotate the arrow when the content is visible */
+}
+
+/* Hover Effect */
+.accordion-header:hover {
+    background-color: #1C2541; /* Darker background when hovering */
+}
+
+.accordion-header:hover:after {
+    color: #ffd700; /* Change arrow color on hover */
+}
+
+.accordion-content {
+    padding: 12px;
+    background-color: #f4f7f6;
+    display: none;
+    border-radius: 5px;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+
+/* Infographics Styling */
+.infographics {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.infographics .infographic-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.infographics .infographic-img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Contact Page Styling */
+.contact-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    color: #1C2541;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form button {
+    background: #1C2541;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #00466a;
+}
+
+.contact-container h3 {
+    font-size: 1.5rem;
+    color: #1C2541;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-container p a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+.contact-container p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0B132B;
+    color: white;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0B132B;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .headline-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .headline-cards-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+

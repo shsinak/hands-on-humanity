@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands of Humanity</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+    
+        <img src="logo.png" alt="Hands of Humanity Logo" class="logo-icon">
+        <div class="logo-text">Hands of Humanity</div>
+    
+		</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Local Resources</a></li>
+                <li class="dropdown">
+                    <a href="#">EYES ON..</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="palestine.html">Palestine</a></li>
+                        <li><a href="yemen.html">Yemen</a></li>
+                        <li><a href="lebanon.html">Lebanon</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="mentalhealth.html">Mental Health</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+	<div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
+	
+	<section class="hero-section">
+	<div class="hero-image">
+        <img src="index-hero.jpg" alt="Home Image">
+    </div>
+    <div class="hero-content">
+        <h1>Hands of Humanity</h1>
+        <p>A platform dedicated to providing resources, support, and community-driven relief efforts for those in need.</p>
+    </div>
+    <div class="credit-text">
+        Photo by <a href="https://unsplash.com/@nasa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">NASA</a> on <a href="https://unsplash.com/photos/photo-of-outer-space-Q1p7bh3SHj8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
+    </div>
+</section>
+    <main>
+	<section class="mission-statement">
+    <div class="mission-container">
+        <div class="mission-item">
+            <img src="earth-logo.png" alt="Access to Resources" class="mission-icon">
+            <h3>Access to Resources</h3>
+            <p>We aim to bridge the gap in accessing crucial humanitarian resources, providing easy navigation to vital services and support networks.</p>
+        </div>
+        <div class="mission-item">
+            <img src="mentalhealth-icon.jpg" alt="Mental Health Support" class="mission-icon">
+            <h3>Mental Health Support</h3>
+            <p>Our mission is to promote mental health awareness and provide accessible resources for those in need.</p>
+        </div>
+        <div class="mission-item">
+            <img src="getinvolved-icon.jpg" alt="Get Involved" class="mission-icon">
+            <h3>Get Involved</h3>
+            <p>Join hands with us in making a lasting impact by volunteering, donating, or spreading awareness.</p>
+        </div>
+    </div>
+</section>
+
+
+
+        <!-- Latest Headlines Section -->
+        <section class="headlines">
+            <h2>Latest Global Humanitarian News</h2>
+            <div class="headline-cards-container">
+                <div class="headline-card">
+                    <img src="thumbnail1.jpg" alt="Story Image">
+					<div class="image-credit">Eyad Baba/AFP</a></div>
+                    <div class="headline-content">
+                        <h3>How did Israel kill the Red Crescent medics in Gaza?</h3>
+                        <p>Israeli troops fired on several rescue vehicles, then buried the killed first responders and their vehicles.</p>
+                        <a href="https://www.aljazeera.com/features/2025/4/1/rescue-workers-israel-killed-found-in-mass-grave-in-gaza-what-to-know" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="headline-card">
+                    <img src="thumbnail2.jpg" alt="Story Image">
+					<div class="image-credit">Stringer/Reuters</div>
+                    <div class="headline-content">
+                        <h3>Myanmar earthquake worsens one of the world's largest and most neglected humanitarian crises</h3>
+                        <p>“The challenge in the coming days will be in moving from the urban areas to the rural.”</p>
+                        <a href="https://www.thenewhumanitarian.org/?gad_source=1&gclid=EAIaIQobChMI6PKcj6m6jAMV11z_AR33FjcMEAAYASAAEgKxh_D_BwE" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="headline-card">
+                    <img src="thumbnail3.jpg" alt="Story Image">
+					<div class="image-credit">UNOCHA/Giles Clarke</a></div>
+                    <div class="headline-content">
+                        <h3>Humanitarian system at breaking point as funding cuts force life-or-death choices</h3>
+                        <p>The UN’s top relief official warned on Wednesday that the global humanitarian system has reached breaking point.</p>
+                        <a href="https://news.un.org/en/story/2025/03/1161066" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="headline-card">
+                    <img src="thumbnail4.jpg" alt="Story Image">
+					<div class="image-credit">UNFPA</div>
+                    <div class="headline-content">
+                        <h3>Gaza Crisis Deepens as International Concerns Mount Over..</h3>
+                        <p>The humanitarian crisis in Gaza has intensified as relentless bombardment and ground operations by Israeli forces continue, leading to soaring civilian casualties and widespread devastation.</p>
+                        <a href="https://kashmirlife.net/gaza-crisis-deepens-as-international-concerns-mount-over-civilian-casualties-and-humanitarian-conditions-387106/" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+		
+		
+		
+		
+		<section class="daily-quote-section">
+    <h2>Daily Quote</h2>
+    <p id="mental-health-tip">Click below for an uplifting quote to inspire hope and resilience!</p>
+    <button id="generate-tip">Get Quote</button>
+    <p id="tipDisplay"></p> <!-- This is where the tip will appear -->
+</section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Hands of Humanity. </p>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top-btn">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>
