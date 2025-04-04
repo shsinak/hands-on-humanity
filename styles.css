@@ -86,32 +86,68 @@ nav ul {
 }
 
 
-/* Responsive Styles */
+/* General Responsive Nav styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0px;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Small screen styles */
 @media screen and (max-width: 768px) {
     .nav-toggle {
         display: block;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+        color: #333;
+        z-index: 1100;
     }
-
-    .nav-links {
+	
+	
+	.nav-links {
         display: none;
         flex-direction: column;
-        background-color: #f5f5f5;
-        position: absolute;
-        top: 70px; /* adjust depending on your header height */
-        right: 0;
-        width: 100%;
-        padding: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background-color: #fff;
+        padding: 20px;
+        position: fixed;
+        top: 80px; /* lower by increasing from 60px */
+        left: 10px; /* a bit away from the edge */
+        width: 90vw; /* not full screen width */
+        max-width: 400px; /* prevent it from being huge on tablets */
+        border-radius: 8px;
+        box-sizing: border-box;
+        z-index: 1000;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
+
 
     .nav-links.active {
         display: flex;
     }
 
-   
+    .nav-links li {
+        margin: 10px 0;
+        text-align: left;
+    }
 
-    .dropdown-menu {
-        position: static;
+    .nav-links li a {
+        color: #333;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        width: 100%;
+        display: block;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 }
 

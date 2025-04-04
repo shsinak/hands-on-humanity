@@ -39,13 +39,18 @@ if (backToTopButton) {
 	// nav hamburger
 	
 
-    const hamburger = document.getElementById('hamburger-icon');
-    const navLinks = document.getElementById('nav-links');
+ 
+    document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav-links");
 
-    // Toggle the display of the navigation menu
-    hamburger.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
     });
+});
+
+
+
 
 
 
