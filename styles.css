@@ -100,6 +100,7 @@ nav ul {
 }
 
 /* Small screen styles */
+/* Small screen styles */
 @media screen and (max-width: 768px) {
     .nav-toggle {
         display: block;
@@ -109,9 +110,8 @@ nav ul {
         color: #333;
         z-index: 1100;
     }
-	
-	
-	.nav-links {
+    
+    .nav-links {
         display: none;
         flex-direction: column;
         background-color: #fff;
@@ -126,7 +126,6 @@ nav ul {
         z-index: 1000;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
-
 
     .nav-links.active {
         display: flex;
@@ -144,12 +143,57 @@ nav ul {
         background-color: #f1f1f1;
         width: 100%;
         display: block;
+        font-size: 16px; /* Reduced font size */
     }
+    
+    /* Dropdown menu for "EYES ON.." */
+nav .dropdown-menu {
+    display: none;
+    list-style: none;
+    background-color: #fff; /* White background to match the rest of the nav */
+    padding: 0;
+    margin-top: 10px; /* Space between main menu and dropdown */
+	margin-left: 20px; /* Move it a little to the right */
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 200px; /* Adjust this value to control the width */
+    min-width: 180px; /* Ensures it doesn't get too small on small screens */
+}
+
+/* Show dropdown on click */
+nav .dropdown-menu.active {
+    display: block;
+}
+
+/* Dropdown items */
+nav .dropdown-menu li {
+    padding: 5px 8px; /* Slightly smaller padding */
+}
+
+nav .dropdown-menu li a {
+    color: #333; /* Dark text color matching other links */
+    text-decoration: none;
+    display: block;
+    font-size: 16px; /* Adjust font size */
+    padding: 6px 8px; /* Adjust padding for compactness */
+    background-color: #f1f1f1; /* Light background color for consistency */
+	width: auto; /* Remove 100% width so it doesn't extend beyond the container */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
+}
+
+/* Dropdown hover effect */
+nav .dropdown-menu li a:hover {
+    background-color: #00466a; /* Darker background on hover */
+    color: white; /* White text on hover */
+}
+
 
     body {
         overflow-x: hidden;
     }
 }
+
+
 
 
 nav ul li {

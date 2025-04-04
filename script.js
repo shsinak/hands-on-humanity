@@ -36,18 +36,25 @@ if (backToTopButton) {
 	
 	
 	
-	// nav hamburger
-	
-
- 
-    document.addEventListener("DOMContentLoaded", function () {
+// nav hamburger
+document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.querySelector(".nav-toggle");
     const nav = document.querySelector(".nav-links");
+    const dropdownLink = document.querySelector("#eyes-on-link"); // The "EYES ON.." link
+    const dropdownMenu = document.querySelector("#dropdown-menu"); // The dropdown menu
 
+    // Toggle side navigation on hamburger click
     toggle.addEventListener("click", () => {
         nav.classList.toggle("active");
     });
+
+    // Toggle dropdown menu on "EYES ON.." link click
+    dropdownLink.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        dropdownMenu.classList.toggle("active");
+    });
 });
+
 
 
 
