@@ -77,6 +77,45 @@ nav ul {
     padding: 0;
 }
 
+.nav-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #f5f5f5;
+        position: absolute;
+        top: 70px; /* adjust depending on your header height */
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+   
+
+    .dropdown-menu {
+        position: static;
+    }
+}
+
+
 nav ul li {
     margin: 0 15px;
 }
