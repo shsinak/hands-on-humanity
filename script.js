@@ -36,7 +36,18 @@ if (backToTopButton) {
 	
 	
 	
+	// nav hamburger
 	
+
+    const hamburger = document.getElementById('hamburger-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    // Toggle the display of the navigation menu
+    hamburger.addEventListener('click', () => {
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+
 
 
 // Click-activated accordion functionality
