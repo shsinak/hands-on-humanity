@@ -758,6 +758,29 @@ nav ul li {
 }
 
 
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+    .term-card {
+        width: 150px; /* Smaller width on mobile */
+        height: 200px; /* Adjust height for mobile screens */
+    }
+
+    .card-inner {
+        transition: transform 0.4s; /* Faster flip on mobile */
+    }
+
+    /* Optional: Card font size adjustments on mobile */
+    .card-front, .card-back {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Allow cards to take full width if needed on mobile */
+    .terms-container {
+        justify-content: space-evenly; /* Adjust card alignment for mobile */
+    }
+}
+
 /* More Articles */
 .articles-section {
     padding: 20px;
